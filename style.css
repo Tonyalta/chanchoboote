@@ -305,8 +305,12 @@ section h2 {
 @media (max-width: 768px) {
     /* Navigation: vertikale Ausrichtung */
     .nav-container {
+        /* Bei kleinen Geräten den Navigationscontainer in die Höhe stapeln
+           und Wrap erlauben, damit Logo und Navigation nicht zu einer breiten
+           Zeile führen. */
         flex-direction: column;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
     .nav ul {
         flex-direction: column;
@@ -314,8 +318,17 @@ section h2 {
         gap: 0.5rem;
         margin-top: 1rem;
     }
+    /* Sorge dafür, dass das ul selbst die volle Breite einnimmt */
+    .nav {
+        width: 100%;
+    }
+    /* Breite der Listenpunkte definieren, damit sie nicht nebeneinander sitzen */
+    .nav li {
+        width: 100%;
+    }
     .nav li a {
         display: block;
+        width: 100%;
         padding: 0.5rem 0;
     }
     /* Hero: kleinere Schriftgrößen und breiteres Overlay */
