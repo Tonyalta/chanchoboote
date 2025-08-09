@@ -288,6 +288,36 @@ section h2 {
     font-size: 0.875rem;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Mobile Navigation Toggle                                                   */
+/* Für die mobile Ansicht verwenden wir eine ein- und ausklappbare Navigation,
+   die über ein „Hamburger“-Icon gesteuert wird. Diese Elemente sind im
+   Standardzustand ausgeblendet und erscheinen erst in kleineren Viewports. */
+
+/* Verstecke das Checkbox-Steuerelement */
+.nav-toggle {
+    display: none;
+}
+
+/* Stil für das Hamburger-Label (drei Balken) */
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/* Balken innerhalb des Hamburger-Labels */
+.nav-toggle-label span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+}
+
 /* Responsive Typografie */
 @media (max-width: 600px) {
     .hero-overlay h1 {
@@ -303,26 +333,31 @@ section h2 {
 /* Bei schmalen Displays wird Navigation, Hero, Grid und Tabellen angepasst  */
 /* -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-    /* Navigation: vertikale Ausrichtung */
+    /* Zeige das Hamburger-Symbol, blende das eigentliche Navigationsmenü aus und
+       zeige es nur, wenn der Toggle aktiviert ist. */
+    .nav-toggle-label {
+        display: flex;
+    }
+    .nav {
+        display: none;
+        width: 100%;
+    }
+    #nav-toggle:checked ~ .nav {
+        display: block;
+    }
+    /* Ordne den Navigationscontainer in die Höhe und lasse ihn umbrechen */
     .nav-container {
-        /* Bei kleinen Geräten den Navigationscontainer in die Höhe stapeln
-           und Wrap erlauben, damit Logo und Navigation nicht zu einer breiten
-           Zeile führen. */
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         flex-wrap: wrap;
     }
+    /* Navigation list: vertikal und volle Breite */
     .nav ul {
         flex-direction: column;
         width: 100%;
         gap: 0.5rem;
         margin-top: 1rem;
     }
-    /* Sorge dafür, dass das ul selbst die volle Breite einnimmt */
-    .nav {
-        width: 100%;
-    }
-    /* Breite der Listenpunkte definieren, damit sie nicht nebeneinander sitzen */
     .nav li {
         width: 100%;
     }
