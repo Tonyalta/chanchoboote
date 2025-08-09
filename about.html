@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns – Bootsverleih Chancho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Bootsverleih Chancho</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="boats.html">Boote</a></li>
+                    <li><a href="prices.html">Preise</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="about-section">
+        <div class="container">
+            <h2>Über uns</h2>
+            <p>
+                Wir sind Chancho – dein Partner für Action und Abenteuer auf der Donau. Als
+                leidenschaftliche Wassersportler wissen wir, wie man die perfekte Mischung aus
+                Geschwindigkeit, Freiheit und Sicherheit schafft. Unsere Flotte aus modernen Motorbooten
+                wird regelmäßig gewartet, damit du dich ganz auf dein Erlebnis konzentrieren kannst. Ob
+                als Adrenalin‑Junkie oder als Neuling am Steuer – bei uns bist du in guten Händen.
+            </p>
+            <p>
+                Unser Team besteht aus erfahrenen Kapitänen und Outdoor‑Enthusiasten, die dir wertvolle
+                Tipps zur Route, zu Manövern und zu den schönsten Aussichtspunkten geben können.
+                Wir freuen uns darauf, dir unvergessliche Momente auf dem Wasser zu ermöglichen.
+            </p>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Bootsverleih Chancho – Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+/*
+  Basistylesheet für den Bootsverleih. Hier definieren wir Farben,
+  Schriftarten und das Layout. Passen Sie die CSS‑Variablen im
+  :root‑Block an, um das Farbschema oder die Schriftgröße zu ändern.
+*/
+
+/* Globale Variablen */
+:root {
+    --color-primary: #0455a1;        /* Hauptfarbe: dunkles Blau */
+    --color-secondary: #027dc3;      /* Akzentfarbe: helleres Blau */
+    --color-light: #f5f8fc;          /* Hintergrundfarbe für Sektionen */
+    --color-dark: #022b4d;           /* Dunklere Töne für Text */
+    --color-white: #ffffff;
+    --font-family: 'Montserrat', sans-serif;
+    --text-base-size: 16px;
+    --radius: 4px;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Grundlegende Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--text-base-size);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-secondary);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.site-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav li a {
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+}
+
+.nav li a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: 600px;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary);
+}
+
+.btn-secondary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Sections */
+section {
+    padding: 3rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+/* About Section */
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Boats Section */
+.boat-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.boat-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.boat-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.boat-card p {
+    font-size: 0.95rem;
+    color: var(--color-dark);
+}
+
+.boat-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Prices Section */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.price-table th,
+.price-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.price-table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.price-table tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.03);
+}
+
+/* Kontakt Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-details a {
+    color: var(--color-secondary);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: var(--radius);
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 2px rgba(2, 125, 195, 0.2);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Responsive Typografie */
+@media (max-width: 600px) {
+    .hero-overlay h1 {
+        font-size: 2rem;
+    }
+    .hero-overlay p {
+        font-size: 1rem;
+    }
+}

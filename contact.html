@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Bootsverleih Chancho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Bootsverleih Chancho</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="boats.html">Boote</a></li>
+                    <li><a href="prices.html">Preise</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="contact-section">
+        <div class="container contact-container">
+            <h2>Kontakt</h2>
+            <div class="contact-details">
+                <p><strong>Adresse:</strong> Donaustraße&nbsp;12, 1020&nbsp;Wien, Österreich</p>
+                <p><strong>Telefon:</strong> <a href="tel:+436760000000">0676&nbsp;000&nbsp;0000</a></p>
+                <p><strong>E‑Mail:</strong> <a href="mailto:info@chanchoboote.com">info@chanchoboote.com</a></p>
+                <p><strong>Öffnungszeiten:</strong> täglich von&nbsp;09:00&nbsp;bis&nbsp;18:00&nbsp;Uhr</p>
+            </div>
+            <form class="contact-form" action="mailto:info@chanchoboote.com" method="post" enctype="text/plain">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E‑Mail</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit" class="btn btn-secondary">Nachricht senden</button>
+            </form>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Bootsverleih Chancho – Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preise – Bootsverleih Chancho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Bootsverleih Chancho</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="boats.html">Boote</a></li>
+                    <li><a href="prices.html">Preise</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="prices-section">
+        <div class="container">
+            <h2>Preise</h2>
+            <p>Hier findest du unsere Mietpreise pro Stunde und pro Tag. Die Boote sind führerscheinfrei und
+               werden inklusive Schwimmwesten und Sicherheitsausrüstung vermietet.</p>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Bootstyp</th>
+                        <th>Stundenpreis</th>
+                        <th>Tagespreis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Motorboot&nbsp;5&nbsp;PS</td>
+                        <td>€25&nbsp;/ Stunde</td>
+                        <td>€120&nbsp;/ Tag</td>
+                    </tr>
+                    <tr>
+                        <td>Motorboot&nbsp;10&nbsp;PS</td>
+                        <td>€35&nbsp;/ Stunde</td>
+                        <td>€180&nbsp;/ Tag</td>
+                    </tr>
+                    <tr>
+                        <td>Motorboot&nbsp;15&nbsp;PS</td>
+                        <td>€45&nbsp;/ Stunde</td>
+                        <td>€220&nbsp;/ Tag</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top:1rem;">Alle Preise sind Richtwerte und können je nach Saison variieren. Für Gruppenangebote
+               und längere Mietdauern kontaktiere uns bitte direkt.</p>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Bootsverleih Chancho – Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

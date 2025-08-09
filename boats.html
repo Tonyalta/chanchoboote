@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Boote – Bootsverleih Chancho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Bootsverleih Chancho</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="boats.html">Boote</a></li>
+                    <li><a href="prices.html">Preise</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="boats-section">
+        <div class="container">
+            <h2>Unsere Motorboote</h2>
+            <p style="text-align:center; max-width:800px; margin:0 auto; margin-bottom:2rem;">
+                Wähle das richtige Gefährt für dein Abenteuer. Alle Boote sind führerscheinfrei und
+                bestens für Action auf der Donau geeignet.
+            </p>
+            <div class="boat-grid">
+                <article class="boat-card">
+                    <img src="assets/motorboat.png" alt="Motorboot 5 PS" class="boat-img">
+                    <h3>Motorboot 5 PS</h3>
+                    <p>Ideal für gemütliche Touren und Einsteiger, die entspannt über die Donau cruisen möchten.</p>
+                </article>
+                <article class="boat-card">
+                    <img src="assets/motorboat.png" alt="Motorboot 10 PS" class="boat-img">
+                    <h3>Motorboot 10 PS</h3>
+                    <p>Die perfekte Balance aus Kraft und Kontrolle – geeignet für Tagesausflüge und kleine Gruppen.</p>
+                </article>
+                <article class="boat-card">
+                    <img src="assets/motorboat.png" alt="Motorboot 15 PS" class="boat-img">
+                    <h3>Motorboot 15 PS</h3>
+                    <p>Für Abenteurer, die mehr Power wollen. Schnell, agil und trotzdem handlich.</p>
+                </article>
+            </div>
+            <p style="text-align:center; margin-top:2rem;">
+                Bereit für die Fahrt deines Lebens? Schaue dir auch unsere <a href="prices.html">Preise</a> an.
+            </p>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Bootsverleih Chancho – Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

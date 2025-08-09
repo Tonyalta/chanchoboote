@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootsverleih Chancho – Action & Abenteuer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Gemeinsame Kopfzeile mit Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Bootsverleih Chancho</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="boats.html">Boote</a></li>
+                    <li><a href="prices.html">Preise</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero‑Bereich mit Abenteuer‑Thema -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h1>Action & Abenteuer auf der Donau</h1>
+            <p>Starte dein nächstes Abenteuer: spüre den Adrenalin‑Kick und entdecke Wien vom Wasser aus!</p>
+            <a href="boats.html" class="btn btn-primary">Boote entdecken</a>
+        </div>
+    </section>
+
+    <!-- Startseiten‑Text -->
+    <section class="about-section">
+        <div class="container">
+            <h2>Willkommen bei Bootsverleih Chancho</h2>
+            <p>
+                Du bist auf der Suche nach Nervenkitzel und unvergesslichen Momenten? Dann bist du bei uns
+                genau richtig! Wir kombinieren Action und Abenteuer mit der Freiheit des Wassers.
+                Miete eines unserer Motorboote und erlebe Wien aus einer neuen Perspektive – kraftvoll,
+                aufregend und immer sicher.
+            </p>
+        </div>
+    </section>
+
+    <!-- Fußzeile -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Bootsverleih Chancho – Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
