@@ -98,7 +98,8 @@ a:focus {
 
 /* Hero Section */
 .hero-section {
-    background-image: url('assets/hero.jpg');
+    /* Verwende den neuen Dateinamen für das Hintergrundbild, um Caching‑Probleme zu vermeiden */
+    background-image: url('assets/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
